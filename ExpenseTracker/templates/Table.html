@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+table, th, td {
+  border:1px solid black;
+}
+
+
+
+    </style>
+</head>
+<body>
+<div>
+    <table style="width:100%">
+        <tr>
+            <th> Expense Date</th>
+            <th> Expense Place</th>
+            <th> Expense Item</th>
+            <th> Expense Amount</th>
+        </tr>
+        {%for i in range(0, len)%}
+        <!-- table rows -->
+        <tr>
+            <td>{{TemplateExpenseDate[i]}}</td>
+            <td>{{TemplateTotalPlace[i]}}</td>
+            <td>{{TemplateTotalItem[i]}}</td>
+            <td> Rs. {{TemplateExpenseAmount[i]}}</td>
+            {%endfor%}
+        </tr>
+    </table>
+
+    <h2> {{TemplateTotalAmount}}</h2> <br> <br>
+</div>
+</body>
+</html>
